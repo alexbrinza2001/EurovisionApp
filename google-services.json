@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "135193924823",
+    "project_id": "eurovision-app-2023",
+    "storage_bucket": "eurovision-app-2023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135193924823:android:d66fb1516f8f3cd6044c92",
+        "android_client_info": {
+          "package_name": "com.example.eurovisionapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "135193924823-gc8rr9driasp6u9t7uajijgm8l8bl2mp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQVcoJqECHcgQKvd_VNlOUbe6-ejKsX9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "135193924823-gc8rr9driasp6u9t7uajijgm8l8bl2mp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
