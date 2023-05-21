@@ -1,14 +1,17 @@
 package com.example.eurovisionapp;
 
 import android.annotation.SuppressLint;
+import android.content.ContentUris;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Patterns;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -19,12 +22,68 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText emailEditText, passwordEditText;
+    private EditText email, password;
+    private Button login, register;
+    private SharedPreferences preferences;
+
+    public static int currentId = 0;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+
+        email = findViewById(R.id.emailText);
+        password = findViewById(R.id.passText);
+        login = findViewById(R.id.loginButton);
+        register = findViewById(R.id.registerButton);
+
+        preferences = getSharedPreferences("USER_INFO", 0);
+        login.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {
+                String emailValue = email.getText().toString().trim();
+                String passValue = password.getText().toString().trim();
+
+                int ok = 0;
+                int userId = preferences.getInt("id", 0);
+                for(int i = 1; i <= userId; i++){
+                    String regEmail = preferences.getString("email" + i, "");
+                    String regPass = preferences.getString("password" + i, "");
+                    if (emailValue.equals(regEmail) && passValue.equals(regPass)) {
+                        ok = 1;
+                        currentId = i;
+                        break;
+                    }
+                }
+
+                if (ok == 1) {
+                    MainActivity.isLoggedIn = true;
+                    Toast.makeText(LoginActivity.this, "Logged in!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
+                else
+                {
+                    Toast.makeText(LoginActivity.this, "Email or password are invalid!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+   /* private EditText emailEditText, passwordEditText;
     private Button loginButton, signupButton;
     private boolean isLoginMode = true;
     private SharedPreferences.Editor editor;
@@ -34,9 +93,9 @@ public class LoginActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceStat e) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register);
         FirebaseApp.initializeApp(this);
 
 
@@ -170,6 +229,6 @@ public class LoginActivity extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         //updateUI(currentUser);
-    }
+    }*/
 
 }

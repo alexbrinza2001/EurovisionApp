@@ -42,4 +42,18 @@
     <string name="_2023">2023</string>
     <string name="login_sign_up">Login/Sign up</string>
     <string name="welcome">Welcome!</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="first_name">First Name</string>
+    <string name="second_name">Second Name</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="gender">Gender:</string>
+    <string name="cancel">Cancel</string>
+    <string name="welcome_back">Welcome back!</string>
+    <string name="welcome_back2">Welcome back!</string>
+    <string name="firstname_secondname">FirstName SecondName</string>
+    <string name="logout">LogOut</string>
+    <string name="profile_picture">Profile picture</string>
+    <string name="profile_pic">Profile Picture</string>
 </resources>

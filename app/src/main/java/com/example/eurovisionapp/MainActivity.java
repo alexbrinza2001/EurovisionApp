@@ -22,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
         return context;
     }
 
+   // public static int usersCount = 0;
+
+    public static Boolean isLoggedIn = false;
+
     private Context context;
 
     @Override
@@ -36,7 +40,21 @@ public class MainActivity extends AppCompatActivity {
 
         ImageButton authButton = findViewById(R.id.authButton);
 
-        authButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, LoginActivity.class)));
+        //authButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, LoginActivity.class)));
+
+        authButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!isLoggedIn) {
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                }
+                else {
+                    Intent intent = new Intent(MainActivity.this, ProfileSettingsActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
 
         Button videoButton = findViewById(R.id.results);
 
