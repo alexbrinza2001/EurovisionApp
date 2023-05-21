@@ -11,6 +11,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
+
+import java.io.IOException;
+
 public class MainActivity extends AppCompatActivity {
 
     public Context getContext() {
@@ -33,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
         authButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, LoginActivity.class)));
 
+        Button videoButton = findViewById(R.id.results);
+
+        videoButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, VideoActivity.class)));
         //-----------------------------
 
         EurovisionDatabase edb = new EurovisionDatabase(context);
