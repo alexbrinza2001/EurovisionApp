@@ -56,4 +56,5 @@
     <string name="logout">LogOut</string>
     <string name="profile_picture">Profile picture</string>
     <string name="profile_pic">Profile Picture</string>
+    <string name="open_gallery">Open Gallery</string>
 </resources>

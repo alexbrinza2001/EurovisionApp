@@ -1,5 +1,6 @@
 package com.example.eurovisionapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -11,12 +12,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.FirebaseOptions;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     public Context getContext() {
         return context;
@@ -48,8 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 if (!isLoggedIn) {
                     Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(intent);
-                }
-                else {
+                } else {
                     Intent intent = new Intent(MainActivity.this, ProfileSettingsActivity.class);
                     startActivity(intent);
                 }
@@ -63,5 +67,20 @@ public class MainActivity extends AppCompatActivity {
 
         EurovisionDatabase edb = new EurovisionDatabase(context);
         SQLiteDatabase database = edb.getWritableDatabase();
+
+        SupportMapFragment mapFragment = (SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.maps);
+        mapFragment.getMapAsync(this);
+    }
+
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        double latitude = 53.3971;
+        double longitude = -2.9865;
+        LatLng location = new LatLng(latitude, longitude);
+
+        MarkerOptions markerOptions = new MarkerOptions().position(location).title("M&S Bank Arena");
+        googleMap.addMarker(markerOptions);
+
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 12));
     }
 }
