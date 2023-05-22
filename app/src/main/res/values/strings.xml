@@ -57,4 +57,6 @@
     <string name="profile_picture">Profile picture</string>
     <string name="profile_pic">Profile Picture</string>
     <string name="open_gallery">Open Gallery</string>
+    <string name="news">News</string>
+    <string name="newsf">NEWSf</string>
 </resources>

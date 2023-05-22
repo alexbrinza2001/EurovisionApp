@@ -9,7 +9,7 @@
     android:paddingTop="16dp"
     android:paddingRight="16dp"
     android:paddingBottom="16dp"
-    android:background="@color/purple_200"
+    android:background="@drawable/main_wallpaper"
     tools:context=".MainActivity">
 
     <TextView
@@ -21,8 +21,9 @@
         android:fontFamily="serif"
         android:text="@string/eurovision_app"
         android:textAlignment="center"
-        android:textColor="@color/purple_700"
+        android:textColor="#000000"
         android:textSize="48sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -31,48 +32,83 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.141" />
 
-    <Button
-        android:id="@+id/my_tops"
-        android:layout_width="258dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/black"
-        android:fontFamily="sans-serif-black"
-        android:focusable="false"
-        android:text="@string/my_tops"
-        android:textDirection="inherit"
-        android:textIsSelectable="true"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_title"
-        app:layout_constraintVertical_bias="0.339" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/main_title">
 
-    <Button
-        android:id="@+id/results"
-        android:layout_width="258dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/black"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/results"
-        android:textIsSelectable="true"
-        android:textSize="20sp"
-        android:focusable="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/my_tops"
-        app:layout_constraintVertical_bias="0.135" />
+        <Button
+            android:id="@+id/my_tops"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="80dp"
+            android:background="@color/button_color2"
+            android:focusable="false"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/my_tops"
+            android:textColor="#FFFFFF"
+            android:textDirection="inherit"
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_title"
+            app:layout_constraintVertical_bias="0.145"
+            app:rippleColor="#000000" />
+
+        <Button
+            android:id="@+id/results"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/button_color2"
+            android:layout_marginTop="20dp"
+            android:focusable="false"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/results"
+            android:textColor="#FFFFFF"
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.468"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_tops"
+            app:layout_constraintVertical_bias="0.095" />
+
+        <Button
+            android:id="@+id/news"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/button_color2"
+            android:focusable="false"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/news"
+            android:textColor="#FFFFFF"
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/results" />
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/authButton"
@@ -81,7 +117,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
-        android:background="@color/purple_200"
+        android:background="#00FFFFFF"
         android:contentDescription="@string/login_sign_up"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/main_title"
@@ -90,16 +126,17 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/auth" />
 
+
     <androidx.fragment.app.FragmentContainerView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:id = "@+id/maps"
+        android:layout_marginTop="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/results"
+        app:layout_constraintTop_toBottomOf="@id/buttons_layout"
         android:name="com.google.android.gms.maps.SupportMapFragment">
-
     </androidx.fragment.app.FragmentContainerView>
 
 

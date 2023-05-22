@@ -4,32 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200"
+    android:background="@drawable/wallpaper2"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/loginTitle"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:fontFamily="cursive"
-        android:gravity="center"
-        android:text="@string/welcome"
-        android:textAllCaps="false"
-        android:textSize="60sp" />
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:background="#44FFFFFF">
 
-    <EditText
-        android:id="@+id/fstName"
-        android:maxLines="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="center"
-        android:fontFamily="serif"
-        android:hint="@string/first_name"
-        android:inputType="textPersonName"
-        android:textSize="24sp"
-        android:textStyle="italic" />
+        <TextView
+            android:id="@+id/loginTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="@string/welcome"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="60sp" />
+
+        <EditText
+            android:id="@+id/fstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="italic" />
 
     <EditText
         android:id="@+id/sndName"
@@ -39,6 +48,7 @@
         android:ems="10"
         android:gravity="center"
         android:fontFamily="serif"
+        android:textColor="#000000"
         android:hint="@string/second_name"
         android:inputType="textPersonName"
         android:textSize="24sp"
@@ -52,6 +62,7 @@
         android:ems="10"
         android:gravity="center"
         android:fontFamily="serif"
+        android:textColor="#000000"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:textSize="24sp"
@@ -63,6 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:textColor="#000000"
         android:gravity="center"
         android:fontFamily="serif"
         android:hint="@string/password"
@@ -71,7 +83,9 @@
         android:textStyle="italic" />
 
     <TextView
+        android:id="@+id/gender_Text"
         android:layout_margin="10dp"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:text="@string/gender"
         android:fontFamily="serif"
@@ -87,45 +101,57 @@
 
         <RadioButton
             android:id="@+id/male"
-            android:checked="true"
-            android:textSize="24sp"
             android:layout_width="wrap_content"
-            android:fontFamily="serif"
             android:layout_height="wrap_content"
-            android:text="@string/male"/>
+            android:checked="true"
+            android:textStyle="italic"
+            android:fontFamily="serif"
+            android:text="@string/male"
+            style="@style/RadioButtonStyle"
+            android:textColorLink="#000000"
+            android:textSize="24sp" />
 
         <RadioButton
             android:id="@+id/female"
-            android:textSize="24sp"
             android:layout_width="wrap_content"
-            android:fontFamily="serif"
             android:layout_height="wrap_content"
-            android:text="@string/female"/>
+            style="@style/RadioButtonStyle"
+            android:fontFamily="serif"
+            android:text="@string/female"
+            android:textStyle="italic"
+            android:textColorLink="#000000"
+            android:textSize="24sp" />
 
     </RadioGroup>
+    </LinearLayout>
 <LinearLayout
     android:layout_marginTop="30dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <Button
         android:id="@+id/registerButton"
         android:layout_width="0dp"
-        android:layout_weight="1"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:fontFamily="serif"
         android:text="@string/register"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        app:rippleColor="#4CAF50" />
 
     <Button
         android:id="@+id/cancelButton"
         android:layout_width="0dp"
-        android:layout_weight="1"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:fontFamily="serif"
         android:text="@string/cancel"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:rippleColor="#FF0000" />
 </LinearLayout>
 
 </LinearLayout>

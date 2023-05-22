@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -39,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         password = findViewById(R.id.passText);
         login = findViewById(R.id.loginButton);
         register = findViewById(R.id.registerButton);
+
 
         preferences = getSharedPreferences("USER_INFO", 0);
         login.setOnClickListener(new View.OnClickListener() {

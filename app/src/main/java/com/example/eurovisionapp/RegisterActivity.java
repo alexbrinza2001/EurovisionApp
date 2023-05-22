@@ -12,6 +12,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 //import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -35,6 +36,8 @@ public class RegisterActivity extends AppCompatActivity {
         gender = findViewById(R.id.gender);
 
         preferences = getSharedPreferences("USER_INFO", 0);
+
+        //culori pentru butoane
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
