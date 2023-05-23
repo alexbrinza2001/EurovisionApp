@@ -20,11 +20,12 @@ public class MyDragListener implements View.OnDragListener {
             case DragEvent.ACTION_DROP:
                 ClipData.Item item = event.getClipData().getItemAt(0);
                 String droppedText = item.getText().toString();
-                int pos1 = 3, pos2 = 4;
+                int pos1 = 5, pos2 = 6;
 
-                while(droppedText.charAt(pos2) != ' ') {
+                while(droppedText.charAt(pos2) != '-') {
                     pos2 = pos2 + 1;
                 }
+                pos2 -= 1;
 
                 String country = droppedText.substring(pos1, pos2);
 

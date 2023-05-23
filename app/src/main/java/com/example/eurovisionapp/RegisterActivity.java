@@ -20,7 +20,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText email, password, firstName, secondName;
     private Button cancel, register;
     private RadioGroup gender;
-    private SharedPreferences preferences;
+    public SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +102,16 @@ public class RegisterActivity extends AppCompatActivity {
                     editor.putString("first_name" + usersCount, firstValue);
                     editor.putString("second_name" + usersCount, secondValue);
                     editor.putString("gender" + usersCount, genderValue);
+                    editor.putString("1_" + usersCount, "12p");
+                    editor.putString("2_" + usersCount, "10p");
+                    editor.putString("3_" + usersCount, "8p");
+                    editor.putString("4_" + usersCount, "7p");
+                    editor.putString("5_" + usersCount, "6p");
+                    editor.putString("6_" + usersCount, "5p");
+                    editor.putString("7_" + usersCount, "4p");
+                    editor.putString("8_" + usersCount, "3p");
+                    editor.putString("9_" + usersCount, "2p");
+                    editor.putString("10_" + usersCount, "1p");
                     editor.putInt("id", usersCount);
                     editor.apply();
 

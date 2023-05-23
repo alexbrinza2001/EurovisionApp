@@ -97,16 +97,14 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         });
 
         Button videoButton = findViewById(R.id.results);
-        videoButton.setBackgroundColor(ContextCompat.getColor(this, R.color.button_color2));
-
-        videoButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, VideoActivity.class)));
+        videoButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ResultsActivity.class)));
         //-----------------------------
 
         EurovisionDatabase edb = new EurovisionDatabase(context);
         SQLiteDatabase database = edb.getWritableDatabase();
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.maps);
-        mapFragment.getMapAsync(this);
+        /*SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.maps);
+        mapFragment.getMapAsync(this);*/
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
 
@@ -120,7 +118,16 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         newsButton.setBackgroundColor(ContextCompat.getColor(this, R.color.button_color2));
 
-        calendar = Calendar.getInstance();
+        Button topButton = findViewById(R.id.top);
+        topButton.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, OverallActivity.class)));
+
+        Intent serviceIntent = new Intent(this, BackgroundMusicService.class);
+        startService(serviceIntent);
+
+        Button oddsButton = findViewById(R.id.odds);
+        oddsButton.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, OddsActivity.class)));
+
+        /*calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY,18);
         calendar.set(Calendar.MINUTE,41);
         calendar.set(Calendar.SECOND,0);
@@ -128,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         setAlarm();
 
-        service = getSystemService(Context.NOTIFICATION_SERVICE);
+        service = getSystemService(Context.NOTIFICATION_SERVICE);*/
 
     }
 

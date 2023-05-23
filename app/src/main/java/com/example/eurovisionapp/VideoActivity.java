@@ -20,9 +20,9 @@ public class VideoActivity extends AppCompatActivity {
             setContentView(R.layout.video_layout);
 
             VideoView videoView = findViewById(R.id.allSongs);
-            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.all_songs;
-            Uri uri = Uri.parse(videoPath);
-            videoView.setVideoURI(uri);
+            //String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.all_songs;
+            //Uri uri = Uri.parse(videoPath);
+            //videoView.setVideoURI(uri);
 
             MediaController mediaController = new MediaController(this);
             videoView.setMediaController(mediaController);

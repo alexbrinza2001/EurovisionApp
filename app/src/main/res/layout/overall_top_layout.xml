@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/overall_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="serif"
+        android:text="@string/overall_top"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.141" />
+    <ScrollView
+        android:id="@+id/scroll_overall"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/overall_title">
+
+    <LinearLayout
+        android:id="@+id/scroll_linear"
+        android:layout_width="350dp"
+        android:layout_height="1000dp"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/number1"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/hielau"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number2"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number3"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number4"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number5"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number6"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number7"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number8"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number9"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number10"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number11"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number12"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number13"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number14"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number15"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number16"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number17"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number18"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number19"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number20"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number21"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number22"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number23"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number24"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number25"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number26"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number27"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number28"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number29"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number30"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number31"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number32"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number33"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number34"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number35"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number36"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number37"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:background="#ffaf42"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="@string/ceva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

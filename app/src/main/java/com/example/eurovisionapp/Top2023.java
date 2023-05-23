@@ -3,12 +3,15 @@ package com.example.eurovisionapp;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -103,7 +106,84 @@ public class Top2023 extends AppCompatActivity {
             view.setOnLongClickListener(new MyLongClickListener());
             view.setOnDragListener(new MyDragListener());
 
-            view.setText(dataList.get(i).getCountryCode() + " " + dataList.get(i).getCountry() + " " + dataList.get(i).getArtist() + " " + dataList.get(i).getSong());
+            view.setText(dataList.get(i).getCountryCode() + " - " + dataList.get(i).getCountry() + " - " + dataList.get(i).getArtist() + " - " + dataList.get(i).getSong());
         }
+
+        if (MainActivity.isLoggedIn) {
+            SharedPreferences preferences = getSharedPreferences("USER_INFO", 0);
+            if (preferences.contains("1_" + LoginActivity.currentId)) {
+                drop.setText(preferences.getString("1_" + LoginActivity.currentId, ""));
+                drop2.setText(preferences.getString("2_" + LoginActivity.currentId, ""));
+                drop3.setText(preferences.getString("3_" + LoginActivity.currentId, ""));
+                drop4.setText(preferences.getString("4_" + LoginActivity.currentId, ""));
+                drop5.setText(preferences.getString("5_" + LoginActivity.currentId, ""));
+                drop6.setText(preferences.getString("6_" + LoginActivity.currentId, ""));
+                drop7.setText(preferences.getString("7_" + LoginActivity.currentId, ""));
+                drop8.setText(preferences.getString("8_" + LoginActivity.currentId, ""));
+                drop9.setText(preferences.getString("9_" + LoginActivity.currentId, ""));
+                drop10.setText(preferences.getString("10_" + LoginActivity.currentId, ""));
+            }
+        }
+
+        Button saveButton = findViewById(R.id.saveButton);
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (MainActivity.isLoggedIn) {
+                    int id = LoginActivity.currentId;
+
+                    boolean allCompleted = true;
+
+                    if (drop.getText().equals("12p")) allCompleted = false;
+                    if (drop2.getText().equals("10p")) allCompleted = false;
+                    if (drop3.getText().equals("8p")) allCompleted = false;
+                    if (drop4.getText().equals("7p")) allCompleted = false;
+                    if (drop5.getText().equals("6p")) allCompleted = false;
+                    if (drop6.getText().equals("5p")) allCompleted = false;
+                    if (drop7.getText().equals("4p")) allCompleted = false;
+                    if (drop8.getText().equals("3p")) allCompleted = false;
+                    if (drop9.getText().equals("2p")) allCompleted = false;
+                    if (drop10.getText().equals("1p")) allCompleted = false;
+
+                    if (!allCompleted) Toast.makeText(getApplicationContext(), "You didn't choose a country for every position!", Toast.LENGTH_SHORT).show();
+                    else {
+                        List<String> textList = new ArrayList<>(Arrays.asList(drop.getText().toString(), drop2.getText().toString(), drop3.getText().toString(), drop4.getText().toString(), drop5.getText().toString(), drop6.getText().toString(), drop7.getText().toString(), drop8.getText().toString(), drop9.getText().toString(), drop10.getText().toString()));
+
+                        boolean allDifferent = true;
+
+                        for (int i = 0; i < 10; i++) {
+                            for (int j = i + 1; j < 10; j++)
+                                if (textList.get(i).equals(textList.get(j))) {
+                                    allDifferent = false;
+                                    break;
+                                }
+                        }
+
+                        if (!allDifferent) Toast.makeText(getApplicationContext(), "You can't have the same country in 2 positions!", Toast.LENGTH_SHORT).show();
+                        else {
+                            SharedPreferences.Editor editor = getSharedPreferences("USER_INFO", 0).edit();
+                            editor.putString("1_" + id, textList.get(0));
+                            editor.putString("2_" + id, textList.get(1));
+                            editor.putString("3_" + id, textList.get(2));
+                            editor.putString("4_" + id, textList.get(3));
+                            editor.putString("5_" + id, textList.get(4));
+                            editor.putString("6_" + id, textList.get(5));
+                            editor.putString("7_" + id, textList.get(6));
+                            editor.putString("8_" + id, textList.get(7));
+                            editor.putString("9_" + id, textList.get(8));
+                            editor.putString("10_" + id, textList.get(9));
+                            editor.apply();
+
+                            Intent intent = new Intent(Top2023.this, MainActivity.class);
+                            Toast.makeText(Top2023.this, "Top saved!", Toast.LENGTH_SHORT).show();
+                            startActivity(intent);
+                        }
+
+                    }
+
+
+                }
+            }
+        });
     }
 }
