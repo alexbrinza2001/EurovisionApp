@@ -1,11 +1,16 @@
 package com.example.eurovisionapp;
 
 import android.annotation.SuppressLint;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -174,9 +180,10 @@ public class Top2023 extends AppCompatActivity {
                             editor.putString("10_" + id, textList.get(9));
                             editor.apply();
 
-                            Intent intent = new Intent(Top2023.this, MainActivity.class);
-                            Toast.makeText(Top2023.this, "Top saved!", Toast.LENGTH_SHORT).show();
-                            startActivity(intent);
+                            //Intent intent = new Intent(Top2023.this, MainActivity.class);
+                            //Toast.makeText(Top2023.this, "Top saved!", Toast.LENGTH_SHORT).show();
+                            makeNotification();
+                            //startActivity(intent);
                         }
 
                     }
@@ -185,5 +192,35 @@ public class Top2023 extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void makeNotification() {
+        String channelID = "CHANNEL_ID_NOTIFICATION";
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), channelID);
+        builder.setSmallIcon(R.drawable.baseline_circle_notifications_24);
+        builder.setContentTitle("Top successfully updated!")
+                .setContentText("Go check the updated overall standings!")
+                .setAutoCancel(true)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+        Intent intent = new Intent(getApplicationContext(), OverallActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent, PendingIntent.FLAG_IMMUTABLE);
+        builder.setContentIntent(pendingIntent);
+        NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel notificationChannel = notificationManager.getNotificationChannel(channelID);
+            if (notificationChannel == null) {
+                int importance = NotificationManager.IMPORTANCE_HIGH;
+                notificationChannel = new NotificationChannel(channelID, "Description", importance);
+                notificationChannel.setLightColor(Color.GREEN);
+                notificationChannel.enableVibration(true);
+                notificationManager.createNotificationChannel(notificationChannel);
+            }
+        }
+
+        notificationManager.notify(0, builder.build());
     }
 }

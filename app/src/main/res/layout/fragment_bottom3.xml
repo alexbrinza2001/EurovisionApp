@@ -3,12 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Bottom3">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id = "@+id/bottom3_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:text="@string/rotterdam_ahoy_arena"
+        app:layout_constraintBottom_toTopOf="@+id/maps"
+        app:layout_constraintTop_toTopOf="@id/parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/bottom_3" />
+        android:id = "@+id/maps"
+        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom3_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment">
+    </androidx.fragment.app.FragmentContainerView>
 
 </FrameLayout>

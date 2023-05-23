@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id = "@+id/bottom1"
-        android:title = "@string/bottom1"
-        android:icon="@drawable/baseline_circle_notifications_24"/>
+        android:title = "@string/_2023"
+        android:icon="@drawable/baseline_location_on_24"/>
     <item
         android:id = "@+id/bottom2"
-        android:title = "@string/bottom2"
-        android:icon="@drawable/baseline_circle_notifications_24"/>
+        android:title = "@string/_2022"
+        android:icon="@drawable/baseline_location_on_24"/>
     <item
         android:id = "@+id/bottom3"
-        android:title = "@string/bottom3"
-        android:icon="@drawable/baseline_circle_notifications_24"/>
+        android:title = "@string/_2021"
+        android:icon="@drawable/baseline_location_on_24"/>
 </menu>

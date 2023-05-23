@@ -57,9 +57,6 @@
             android:name=".ProfileSettingsActivity">
         </activity>
         <activity
-            android:name=".NewsActivity">
-        </activity>
-        <activity
             android:name=".NotificationActivity">
         </activity>
         <activity
@@ -70,6 +67,9 @@
         </activity>
         <activity
             android:name=".ResultsActivity">
+        </activity>
+        <activity
+            android:name=".LocationsActivity">
         </activity>
 
         <service android:name=".BackgroundMusicService" />

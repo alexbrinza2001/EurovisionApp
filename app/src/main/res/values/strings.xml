@@ -80,4 +80,8 @@
     <string name="bottom_3">Bottom 3</string>
     <string name="_2021">2021</string>
     <string name="_2022">2022</string>
+    <string name="m_s_bank_arena"><![CDATA[M&S Bank Arena]]></string>
+    <string name="palaolimpico">Palaolimpico</string>
+    <string name="palaolimpicoo">PalaOlimpico</string>
+    <string name="rotterdam_ahoy_arena">Rotterdam Ahoy Arena</string>
 </resources>
