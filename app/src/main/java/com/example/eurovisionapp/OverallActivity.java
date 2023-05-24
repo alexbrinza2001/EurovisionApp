@@ -1,7 +1,11 @@
 package com.example.eurovisionapp;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,8 +24,15 @@ public class OverallActivity extends AppCompatActivity {
 
         updateTop();
 
+        ImageButton backButton = findViewById(R.id.auth_back);
+        backButton.setOnClickListener(view -> {
+            Intent intent = new Intent(OverallActivity.this, MainActivity.class);
+            startActivity(intent);
+        });
+
     }
 
+    @SuppressLint("SetTextI18n")
     public void updateTop() {
 
         HashMap<String, Integer> dictionary = new HashMap<>();
@@ -94,7 +105,7 @@ public class OverallActivity extends AppCompatActivity {
 
         for (int i = 0; i < 37; i++) {
             System.out.println(countries2023.get(i) + points.get(i));
-            textList.get(i).setText(countries2023.get(i));
+            textList.get(i).setText((i + 1) + ". " + countries2023.get(i) + " - " + points.get(i));
         }
 
     }

@@ -3,10 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#cbb8ff"
-    android:id="@+id/top_2023">
-
+    android:layout_height="match_parent">
+<!--    android:id="@+id/top_2023"-->
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
@@ -14,15 +12,21 @@
         android:layout_marginStart="78dp"
         android:layout_marginTop="53dp"
         android:text="@string/_6"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/drop"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="serif"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
-        android:layout_marginTop="56dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="60dp"
+        android:fontFamily="serif"
+        android:textSize="16sp"
         android:text="@string/_4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -32,7 +36,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
-        android:layout_marginTop="62dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="60dp"
+        android:fontFamily="serif"
+        android:textSize="16sp"
         android:text="@string/_2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -41,9 +48,12 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
         android:layout_marginStart="29dp"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="60dp"
         android:text="@string/_3"
+        android:textSize="16sp"
+        android:fontFamily="serif"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -53,11 +63,13 @@
         android:layout_height="70dp"
         android:layout_marginTop="356dp"
         android:layout_marginEnd="76dp"
-        android:background="#dc99d7"
+        android:background="#CCAFD5F0"
         android:gravity="center"
         android:text="@string/_1p"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="serif"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/drop9"
@@ -65,11 +77,13 @@
         android:layout_height="70dp"
         android:layout_marginTop="272dp"
         android:layout_marginEnd="76dp"
-        android:background="#dc99d7"
+        android:background="#CCAFD5F0"
         android:gravity="center"
         android:text="@string/_2p"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="serif"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/drop7"
@@ -77,11 +91,13 @@
         android:layout_height="70dp"
         android:layout_marginTop="112dp"
         android:layout_marginEnd="76dp"
-        android:background="#dc99d7"
+        android:background="#CCAFD5F0"
         android:gravity="center"
         android:text="@string/_4p"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="serif"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/drop8"
@@ -89,11 +105,13 @@
         android:layout_height="70dp"
         android:layout_marginTop="192dp"
         android:layout_marginEnd="76dp"
-        android:background="#dc99d7"
+        android:background="#CCAFD5F0"
         android:gravity="center"
         android:text="@string/_3p"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="serif"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/drop6"
@@ -101,11 +119,13 @@
         android:layout_height="70dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="76dp"
-        android:background="#dc99d7"
+        android:background="#CCAFD5F0"
         android:gravity="center"
         android:text="@string/_5p"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="serif"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/drop5"
@@ -113,11 +133,13 @@
         android:layout_height="70dp"
         android:layout_marginTop="356dp"
         android:layout_marginEnd="268dp"
-        android:background="#dc99d7"
+        android:background="#CCAFD5F0"
         android:gravity="center"
         android:text="@string/_6p"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="serif"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/drop4"
@@ -125,11 +147,13 @@
         android:layout_height="70dp"
         android:layout_marginTop="272dp"
         android:layout_marginEnd="268dp"
-        android:background="#dc99d7"
+        android:background="#CCAFD5F0"
         android:gravity="center"
         android:text="@string/_7p"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="serif"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/drop3"
@@ -137,11 +161,14 @@
         android:layout_height="70dp"
         android:layout_marginTop="192dp"
         android:layout_marginEnd="268dp"
-        android:background="#ca8ece"
+        android:background="#CCAD8A56"
+        android:textStyle="bold"
         android:gravity="center"
         android:text="@string/_8p"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="serif"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/drop2"
@@ -149,11 +176,14 @@
         android:layout_height="70dp"
         android:layout_marginTop="108dp"
         android:layout_marginEnd="268dp"
-        android:background="#b466ae"
+        android:background="#CCD7D7D7"
         android:gravity="center"
+        android:textStyle="bold"
         android:text="@string/_10p"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="serif"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/drop"
@@ -161,8 +191,11 @@
         android:layout_height="70dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="268dp"
-        android:background="#9e5f9f"
+        android:background="#CCC9B037"
+        android:fontFamily="serif"
+        android:textSize="16sp"
         android:gravity="center"
+        android:textStyle="bold"
         android:text="@string/_12p"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -174,16 +207,22 @@
         android:layout_marginStart="29dp"
         android:layout_marginTop="53dp"
         android:text="@string/_1"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="serif"
+        android:textSize="16sp" />
+    
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="78dp"
-        android:layout_marginTop="67dp"
+        android:layout_marginStart="73dp"
+        android:fontFamily="serif"
+        android:layout_marginTop="60dp"
+        android:textSize="16sp"
         android:text="@string/_10"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/drop5"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -191,8 +230,11 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="serif"
         android:layout_marginStart="78dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="60dp"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
         android:text="@string/_9"
         app:layout_constraintStart_toEndOf="@+id/drop4"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
@@ -202,8 +244,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="78dp"
-        android:layout_marginTop="66dp"
-        android:text="@string/_8"
+        android:layout_marginTop="60dp"
+        android:fontFamily="serif"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:text="@string/__8"
         app:layout_constraintStart_toEndOf="@+id/drop3"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -212,8 +257,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="78dp"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="60dp"
+        android:textColor="#FFFFFF"
         android:text="@string/_7"
+        android:fontFamily="serif"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/drop2"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -222,8 +270,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
-        android:layout_marginTop="67dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="serif"
         android:text="@string/_5"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -248,558 +299,619 @@
 
             <TextView
                 android:id="@+id/drag1"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
-                android:text="@string/hielau"
+                android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag2"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag3"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
+                android:fontFamily="serif"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/drag4"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag5"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="10dp"
+               android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag6"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="10dp"
+               android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag7"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="10dp"
+               android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag8"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="10dp"
+               android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag9"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="10dp"
+               android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag10"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="10dp"
+               android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag11"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="10dp"
+               android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag12"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="10dp"
+               android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag13"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="10dp"
+               android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag14"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
             <TextView
                 android:id="@+id/drag15"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
             <TextView
                 android:id="@+id/drag16"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
             <TextView
                 android:id="@+id/drag17"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
             <TextView
                 android:id="@+id/drag18"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
             <TextView
                 android:id="@+id/drag19"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
             <TextView
                 android:id="@+id/drag20"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
             <TextView
                 android:id="@+id/drag21"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
             <TextView
                 android:id="@+id/drag22"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
             <TextView
                 android:id="@+id/drag23"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
             <TextView
                 android:id="@+id/drag24"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
             <TextView
                 android:id="@+id/drag25"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
             <TextView
                 android:id="@+id/drag26"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag27"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag28"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
             <TextView
                 android:id="@+id/drag29"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag30"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag31"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag32"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag33"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag34"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag35"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag36"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/drag37"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="0dp"
-                android:background="#ffaf42"
+                android:background="#CCC3B1E1"
+				android:textStyle="bold"
                 android:gravity="center"
                 android:longClickable="true"
                 android:text="@string/ceva"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="serif"
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -813,6 +925,7 @@
         android:layout_marginBottom="60dp"
         android:fontFamily="cursive"
         android:gravity="center"
+        android:textColor="#FFFFFF"
         android:orientation="vertical"
         android:text="@string/_2023"
         android:textSize="60sp"
@@ -822,17 +935,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:background="@color/button_color2"
+        android:fontFamily="serif"
+        android:text="Back"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/drop7"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
     <Button
         android:id="@+id/saveButton"
-        android:layout_width="52dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="13dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="44dp"
+        android:background="@color/button_color2"
+        android:fontFamily="serif"
         android:text="@string/save"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toStartOf="@+id/textView9"
-        app:layout_constraintStart_toEndOf="@+id/drop"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/drop9"
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -57,9 +57,6 @@
             android:name=".ProfileSettingsActivity">
         </activity>
         <activity
-            android:name=".NotificationActivity">
-        </activity>
-        <activity
             android:name=".OverallActivity">
         </activity>
         <activity

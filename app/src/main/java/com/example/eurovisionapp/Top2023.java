@@ -131,6 +131,16 @@ public class Top2023 extends AppCompatActivity {
             }
         }
 
+        Button backButton = findViewById(R.id.backButton);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Top2023.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Button saveButton = findViewById(R.id.saveButton);
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override

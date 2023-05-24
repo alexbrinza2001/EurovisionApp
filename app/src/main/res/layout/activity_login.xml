@@ -118,10 +118,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="2dp"
-        android:background="#00FFFFFF"
         android:contentDescription="@string/go_back"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/loginTitle"
+        android:background="#55FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/text_layout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/actionModeCloseDrawable" />
