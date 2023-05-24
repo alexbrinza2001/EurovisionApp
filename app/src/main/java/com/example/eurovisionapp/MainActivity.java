@@ -46,6 +46,8 @@ import com.google.android.material.timepicker.TimeFormat;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
+import javax.inject.Inject;
+
 public class MainActivity extends AppCompatActivity {
 
     public static Context getContext() {
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = this;
+        service = getSystemService(Context.NOTIFICATION_SERVICE);
 
         Button myTopsButton = findViewById(R.id.my_tops);
 
