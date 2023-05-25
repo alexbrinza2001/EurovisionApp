@@ -48,10 +48,6 @@ public class ContestAdapter extends RecyclerView.Adapter<ContestAdapter.ViewHold
 
         buttonList.add(holder.button);
 
-        System.out.println(position);
-        System.out.println(item.getCity());
-        System.out.println(item.getYear());
-
         holder.city.setText(item.getCity());
         holder.year.setText(Integer.toString(item.getYear()));
         byte[] blobData = item.getImage();
@@ -60,9 +56,6 @@ public class ContestAdapter extends RecyclerView.Adapter<ContestAdapter.ViewHold
 
         holder.city.setTextColor(ContextCompat.getColor(context, R.color.white_opacity));
         holder.year.setTextColor(ContextCompat.getColor(context, R.color.white_opacity));
-
-        System.out.println(holder.city.getText());
-        System.out.println(holder.year.getText());
     }
 
     @Override

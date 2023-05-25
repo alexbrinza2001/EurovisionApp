@@ -105,7 +105,6 @@ public class Overall2023 extends AppCompatActivity {
         List<TextView> textList = new ArrayList<>(Arrays.asList(findViewById(R.id.number1), findViewById(R.id.number2), findViewById(R.id.number3), findViewById(R.id.number4), findViewById(R.id.number5), findViewById(R.id.number6), findViewById(R.id.number7), findViewById(R.id.number8), findViewById(R.id.number9),findViewById(R.id.number10),findViewById(R.id.number11), findViewById(R.id.number12),findViewById(R.id.number13),findViewById(R.id.number14),findViewById(R.id.number15),findViewById(R.id.number16), findViewById(R.id.number17),findViewById(R.id.number18),findViewById(R.id.number19),findViewById(R.id.number20),findViewById(R.id.number21),findViewById(R.id.number22),findViewById(R.id.number23),findViewById(R.id.number24),findViewById(R.id.number25), findViewById(R.id.number26), findViewById(R.id.number27), findViewById(R.id.number28), findViewById(R.id.number29), findViewById(R.id.number30), findViewById(R.id.number31), findViewById(R.id.number32), findViewById(R.id.number33), findViewById(R.id.number34), findViewById(R.id.number35), findViewById(R.id.number36), findViewById(R.id.number37)));
 
         for (int i = 0; i < countries2023.size(); i++) {
-            System.out.println(countries2023.get(i) + points.get(i));
             textList.get(i).setText((i + 1) + ". " + countries2023.get(i) + " - " + points.get(i));
         }
 

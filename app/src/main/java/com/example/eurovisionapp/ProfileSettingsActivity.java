@@ -76,7 +76,6 @@ public class ProfileSettingsActivity extends AppCompatActivity {
 
                 imgGallery.setImageURI(data.getData());
                 SharedPreferences preferences = getSharedPreferences("USER_INFO", 0);
-                ;
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("image" + LoginActivity.currentId, data.getData().toString());
                 editor.apply();

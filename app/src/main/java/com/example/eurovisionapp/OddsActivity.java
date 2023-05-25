@@ -1,5 +1,6 @@
 package com.example.eurovisionapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebSettings;
@@ -34,7 +35,7 @@ public class OddsActivity extends AppCompatActivity {
                     URL url = new URL("https://eurovisionworld.com/odds/eurovision");
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("GET");
-                    System.out.println("aici");
+
                     int responseCode = connection.getResponseCode();
                     if (responseCode == HttpURLConnection.HTTP_OK) {
                         InputStream inputStream = connection.getInputStream();
@@ -48,12 +49,10 @@ public class OddsActivity extends AppCompatActivity {
 
                         String htmlContent = response.toString();
 
-                        System.out.println("conectat bossule");
-
                         runOnUiThread(new Runnable() {
+                            @SuppressLint("SetJavaScriptEnabled")
                             @Override
                             public void run() {
-                                System.out.println("ne-am dus");
                                 WebView webView = findViewById(R.id.odds_page);
 
                                 WebSettings webSettings = webView.getSettings();
