@@ -85,4 +85,8 @@
     <string name="palaolimpicoo">PalaOlimpico</string>
     <string name="rotterdam_ahoy_arena">Rotterdam Ahoy Arena</string>
     <string name="__8">8.</string>
+    <string name="rotterdam_ahoy">Rotterdam Ahoy</string>
+    <string name="official_results">Official Results</string>
+    <string name="users_top">Users Top</string>
+    <string name="select_contest">Select contest</string>
 </resources>

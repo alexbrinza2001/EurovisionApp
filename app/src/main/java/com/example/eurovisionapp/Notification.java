@@ -25,7 +25,18 @@ public class Notification {
                 .setAutoCancel(true)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
-        Intent intent = new Intent(MainActivity.getContext(), OverallActivity.class);
+        Intent intent = new Intent(MainActivity.getContext(), Overall2023.class);
+
+        if(MainActivity.whichYear == 2023) {
+            intent = new Intent(MainActivity.getContext(), Overall2023.class);
+        }
+        else if(MainActivity.whichYear == 2022){
+            intent = new Intent(MainActivity.getContext(), Overall2022.class);
+        }
+        else if (MainActivity.whichYear == 2021){
+            intent = new Intent(MainActivity.getContext(), Overall2021.class);
+        }
+
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.getContext(), 0, intent, PendingIntent.FLAG_IMMUTABLE);

@@ -5,29 +5,44 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Bottom3">
-
-    <TextView
-        android:id = "@+id/bottom3_text"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:fontFamily="serif"
-        android:textStyle="bold"
-        android:text="@string/rotterdam_ahoy_arena"
-        app:layout_constraintBottom_toTopOf="@+id/maps"
-        app:layout_constraintTop_toTopOf="@id/parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        />
+        android:orientation="horizontal"
+        android:background="#55FFFFFF">
+    <ImageButton
+        android:id="@+id/bottom3_back"
+        android:layout_width="109dp"
+        android:layout_height="66dp"
+        android:background="#55FFFFFF"
+        android:contentDescription="@string/go_back"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+        <TextView
+            android:id="@+id/bottom3_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="@string/rotterdam_ahoy"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/maps"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/parent" />
+    </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id = "@+id/maps"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="65dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bottom3_text"
         app:layout_constraintLeft_toLeftOf="parent"

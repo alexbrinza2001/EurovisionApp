@@ -6,27 +6,25 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.sql.Blob;
-import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class MyTops extends AppCompatActivity {
 
     private ContestAdapter contestAdapter;
+
+    //0 = my tops, 1 = users tops
+    public static int whereAmI = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +70,7 @@ public class MyTops extends AppCompatActivity {
         contestAdapter = new ContestAdapter(dataList, context);
 
         recyclerView.setAdapter(contestAdapter);
+        recyclerView.setBackgroundColor(2);
 
         recyclerView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
@@ -79,7 +78,41 @@ public class MyTops extends AppCompatActivity {
 
                 List<Button> buttons = contestAdapter.getButtonList();
 
-                buttons.get(0).setOnClickListener(v -> startActivity(new Intent(MyTops.this, Top2023.class)));
+                buttons.get(0).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (whereAmI == 0){
+                            startActivity(new Intent(MyTops.this, Top2023.class));
+                        }
+                        else{
+                            startActivity(new Intent(MyTops.this, Overall2023.class));
+                        }
+                    }
+                });
+
+                buttons.get(1).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (whereAmI == 0){
+                            startActivity(new Intent(MyTops.this, Top2022.class));
+                        }
+                        else{
+                            startActivity(new Intent(MyTops.this, Overall2022.class));
+                        }
+                    }
+                });
+
+                buttons.get(2).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (whereAmI == 0){
+                            startActivity(new Intent(MyTops.this, Top2021.class));
+                        }
+                        else{
+                            startActivity(new Intent(MyTops.this, Overall2021.class));
+                        }
+                    }
+                });
 
                 recyclerView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
             }

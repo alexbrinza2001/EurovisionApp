@@ -21,7 +21,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-public class Top2023 extends AppCompatActivity {
+public class Top2021 extends AppCompatActivity {
 
     @Inject
     Notification notification;
@@ -30,7 +30,7 @@ public class Top2023 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.top_2023);
+        setContentView(R.layout.top_2021);
 
         TextView drag1 = findViewById(R.id.drag1);
         drag1.setOnLongClickListener(new MyLongClickListener());
@@ -75,7 +75,7 @@ public class Top2023 extends AppCompatActivity {
         SQLiteDatabase db = eurovisionDatabase.getReadableDatabase();
         String[] projection = {"year", "countryCode", "country", "artist", "song"};
         String selection = "year" + " = ?";
-        String[] selectionArgs = {"2023"};
+        String[] selectionArgs = {"2021"};
 
         @SuppressLint("Recycle") Cursor cursor = db.query("song_info", projection, selection, selectionArgs, null, null, null);
 
@@ -104,7 +104,7 @@ public class Top2023 extends AppCompatActivity {
 
         LinearLayout linearLayout = findViewById(R.id.scroll_linear);
 
-        List<TextView> dragList = new ArrayList<>(Arrays.asList(linearLayout.findViewById(R.id.drag1), linearLayout.findViewById(R.id.drag2), linearLayout.findViewById(R.id.drag3), linearLayout.findViewById(R.id.drag4), linearLayout.findViewById(R.id.drag5), linearLayout.findViewById(R.id.drag6), linearLayout.findViewById(R.id.drag7), linearLayout.findViewById(R.id.drag8), linearLayout.findViewById(R.id.drag9), linearLayout.findViewById(R.id.drag10), linearLayout.findViewById(R.id.drag11), linearLayout.findViewById(R.id.drag12), linearLayout.findViewById(R.id.drag13), linearLayout.findViewById(R.id.drag14), linearLayout.findViewById(R.id.drag15), linearLayout.findViewById(R.id.drag16), linearLayout.findViewById(R.id.drag17), linearLayout.findViewById(R.id.drag18), linearLayout.findViewById(R.id.drag19), linearLayout.findViewById(R.id.drag20), linearLayout.findViewById(R.id.drag21), linearLayout.findViewById(R.id.drag22), linearLayout.findViewById(R.id.drag23), linearLayout.findViewById(R.id.drag24), linearLayout.findViewById(R.id.drag25), linearLayout.findViewById(R.id.drag26), linearLayout.findViewById(R.id.drag27), linearLayout.findViewById(R.id.drag28), linearLayout.findViewById(R.id.drag29), linearLayout.findViewById(R.id.drag30), linearLayout.findViewById(R.id.drag31), linearLayout.findViewById(R.id.drag32), linearLayout.findViewById(R.id.drag33), linearLayout.findViewById(R.id.drag34), linearLayout.findViewById(R.id.drag35), linearLayout.findViewById(R.id.drag36), linearLayout.findViewById(R.id.drag37)));
+        List<TextView> dragList = new ArrayList<>(Arrays.asList(linearLayout.findViewById(R.id.drag1), linearLayout.findViewById(R.id.drag2), linearLayout.findViewById(R.id.drag3), linearLayout.findViewById(R.id.drag4), linearLayout.findViewById(R.id.drag5), linearLayout.findViewById(R.id.drag6), linearLayout.findViewById(R.id.drag7), linearLayout.findViewById(R.id.drag8), linearLayout.findViewById(R.id.drag9), linearLayout.findViewById(R.id.drag10), linearLayout.findViewById(R.id.drag11), linearLayout.findViewById(R.id.drag12), linearLayout.findViewById(R.id.drag13), linearLayout.findViewById(R.id.drag14), linearLayout.findViewById(R.id.drag15), linearLayout.findViewById(R.id.drag16), linearLayout.findViewById(R.id.drag17), linearLayout.findViewById(R.id.drag18), linearLayout.findViewById(R.id.drag19), linearLayout.findViewById(R.id.drag20), linearLayout.findViewById(R.id.drag21), linearLayout.findViewById(R.id.drag22), linearLayout.findViewById(R.id.drag23), linearLayout.findViewById(R.id.drag24), linearLayout.findViewById(R.id.drag25), linearLayout.findViewById(R.id.drag26), linearLayout.findViewById(R.id.drag27), linearLayout.findViewById(R.id.drag28), linearLayout.findViewById(R.id.drag29), linearLayout.findViewById(R.id.drag30), linearLayout.findViewById(R.id.drag31), linearLayout.findViewById(R.id.drag32), linearLayout.findViewById(R.id.drag33), linearLayout.findViewById(R.id.drag34), linearLayout.findViewById(R.id.drag35), linearLayout.findViewById(R.id.drag36), linearLayout.findViewById(R.id.drag37), linearLayout.findViewById(R.id.drag38), linearLayout.findViewById(R.id.drag39)));
 
         for (int i = 0; i < dataList.size(); i++) {
             TextView view = dragList.get(i);
@@ -116,17 +116,17 @@ public class Top2023 extends AppCompatActivity {
 
         if (MainActivity.isLoggedIn) {
             SharedPreferences preferences = getSharedPreferences("USER_INFO", 0);
-            if (preferences.contains("1_" + LoginActivity.currentId)) {
-                drop.setText(preferences.getString("1_" + LoginActivity.currentId, ""));
-                drop2.setText(preferences.getString("2_" + LoginActivity.currentId, ""));
-                drop3.setText(preferences.getString("3_" + LoginActivity.currentId, ""));
-                drop4.setText(preferences.getString("4_" + LoginActivity.currentId, ""));
-                drop5.setText(preferences.getString("5_" + LoginActivity.currentId, ""));
-                drop6.setText(preferences.getString("6_" + LoginActivity.currentId, ""));
-                drop7.setText(preferences.getString("7_" + LoginActivity.currentId, ""));
-                drop8.setText(preferences.getString("8_" + LoginActivity.currentId, ""));
-                drop9.setText(preferences.getString("9_" + LoginActivity.currentId, ""));
-                drop10.setText(preferences.getString("10_" + LoginActivity.currentId, ""));
+            if (preferences.contains("1_2021_" + LoginActivity.currentId)) {
+                drop.setText(preferences.getString("1_2021_" + LoginActivity.currentId, ""));
+                drop2.setText(preferences.getString("2_2021_" + LoginActivity.currentId, ""));
+                drop3.setText(preferences.getString("3_2021_" + LoginActivity.currentId, ""));
+                drop4.setText(preferences.getString("4_2021_" + LoginActivity.currentId, ""));
+                drop5.setText(preferences.getString("5_2021_" + LoginActivity.currentId, ""));
+                drop6.setText(preferences.getString("6_2021_" + LoginActivity.currentId, ""));
+                drop7.setText(preferences.getString("7_2021_" + LoginActivity.currentId, ""));
+                drop8.setText(preferences.getString("8_2021_" + LoginActivity.currentId, ""));
+                drop9.setText(preferences.getString("9_2021_" + LoginActivity.currentId, ""));
+                drop10.setText(preferences.getString("10_2021_" + LoginActivity.currentId, ""));
             }
         }
 
@@ -135,7 +135,7 @@ public class Top2023 extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Top2023.this, MyTops.class);
+                Intent intent = new Intent(Top2021.this, MyTops.class);
                 startActivity(intent);
             }
         });
@@ -180,19 +180,19 @@ public class Top2023 extends AppCompatActivity {
                         if (!allDifferent) Toast.makeText(getApplicationContext(), "You can't have the same country in 2 positions!", Toast.LENGTH_SHORT).show();
                         else {
                             SharedPreferences.Editor editor = getSharedPreferences("USER_INFO", 0).edit();
-                            editor.putString("1_" + id, textList.get(0));
-                            editor.putString("2_" + id, textList.get(1));
-                            editor.putString("3_" + id, textList.get(2));
-                            editor.putString("4_" + id, textList.get(3));
-                            editor.putString("5_" + id, textList.get(4));
-                            editor.putString("6_" + id, textList.get(5));
-                            editor.putString("7_" + id, textList.get(6));
-                            editor.putString("8_" + id, textList.get(7));
-                            editor.putString("9_" + id, textList.get(8));
-                            editor.putString("10_" + id, textList.get(9));
+                            editor.putString("1_2021_" + id, textList.get(0));
+                            editor.putString("2_2021_" + id, textList.get(1));
+                            editor.putString("3_2021_" + id, textList.get(2));
+                            editor.putString("4_2021_" + id, textList.get(3));
+                            editor.putString("5_2021_" + id, textList.get(4));
+                            editor.putString("6_2021_" + id, textList.get(5));
+                            editor.putString("7_2021_" + id, textList.get(6));
+                            editor.putString("8_2021_" + id, textList.get(7));
+                            editor.putString("9_2021_" + id, textList.get(8));
+                            editor.putString("10_2021_" + id, textList.get(9));
                             editor.apply();
 
-                            MainActivity.whichYear = 2023;
+                            MainActivity.whichYear = 2021;
 
                             notification.makeNotification("Top successfully updated!", "Go check the updated overall standings!");
 

@@ -5,12 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/wallpaper2">
+<LinearLayout
+    android:id="@+id/lt_auth"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintTop_toTopOf="parent">
+    <ImageButton
+        android:id="@+id/auth_back"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/go_back"
+        android:scaleType="centerInside"
+        android:background="#44FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/text_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
 
     <LinearLayout
         android:id="@+id/text_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
         android:layout_marginBottom="32dp"
         android:background="#44FFFFFF"
         android:gravity="center"
@@ -22,8 +39,8 @@
             android:id="@+id/loginTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:fontFamily="cursive"
+            android:layout_marginTop = "20dp"
             android:gravity="center"
             android:text="@string/welcome_back2"
             android:textAllCaps="false"
@@ -67,6 +84,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/emailText" />
     </LinearLayout>
+</LinearLayout>
 
     <LinearLayout
         android:id="@+id/buttons_lt"
@@ -76,7 +94,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_layout"
+        app:layout_constraintTop_toBottomOf="@+id/lt_auth"
         android:layout_marginTop="30dp">
 
         <Button
@@ -111,18 +129,4 @@
     </LinearLayout>
 
 
-    <ImageButton
-        android:id="@+id/auth_back"
-        android:layout_width="109dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="2dp"
-        android:contentDescription="@string/go_back"
-        android:scaleType="centerInside"
-        android:background="#55FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/text_layout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.eurovisionapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -22,7 +24,14 @@ public class Bottom3 extends Fragment implements OnMapReadyCallback {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_bottom3, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_bottom3, container, false);
+
+        ImageButton backButton = view.findViewById(R.id.bottom3_back);
+
+        backButton.setOnClickListener(v -> {startActivity(new Intent(getActivity(), MainActivity.class));});
+
+        return view;
     }
 
     @Override
@@ -39,7 +48,7 @@ public class Bottom3 extends Fragment implements OnMapReadyCallback {
         double longitude = 4.4881;
         LatLng location = new LatLng(latitude, longitude);
 
-        MarkerOptions markerOptions = new MarkerOptions().position(location).title("Rotterdam Ahoy Arena");
+        MarkerOptions markerOptions = new MarkerOptions().position(location).title("Rotterdam Ahoy");
         googleMap.addMarker(markerOptions);
 
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 12));

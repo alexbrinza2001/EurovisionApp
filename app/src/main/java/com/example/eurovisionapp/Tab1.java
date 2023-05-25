@@ -1,9 +1,11 @@
 package com.example.eurovisionapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -12,7 +14,10 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -26,7 +31,14 @@ public class Tab1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_tab1, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_tab1, container, false);
+
+        ImageButton backButton = view.findViewById(R.id.tab1_back);
+
+        backButton.setOnClickListener(v -> {startActivity(new Intent(getActivity(), MainActivity.class));});
+
+        return view;
     }
 
     @Override

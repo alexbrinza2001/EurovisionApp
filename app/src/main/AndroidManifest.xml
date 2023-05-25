@@ -42,6 +42,12 @@
             android:name=".Top2023">
         </activity>
         <activity
+            android:name=".Top2022">
+        </activity>
+        <activity
+            android:name=".Top2021">
+        </activity>
+        <activity
             android:name=".LoginActivity">
         </activity>
         <activity
@@ -57,7 +63,13 @@
             android:name=".ProfileSettingsActivity">
         </activity>
         <activity
-            android:name=".OverallActivity">
+            android:name=".Overall2023">
+        </activity>
+        <activity
+            android:name=".Overall2022">
+        </activity>
+        <activity
+            android:name=".Overall2021">
         </activity>
         <activity
             android:name=".OddsActivity">

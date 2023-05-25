@@ -1,5 +1,6 @@
 package com.example.eurovisionapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,13 +12,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageButton;
 
 public class Tab2 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_tab2, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_tab2, container, false);
+
+        ImageButton backButton = view.findViewById(R.id.tab2_back);
+
+        backButton.setOnClickListener(v -> {startActivity(new Intent(getActivity(), MainActivity.class));});
+
+        return view;
     }
 
     @Override

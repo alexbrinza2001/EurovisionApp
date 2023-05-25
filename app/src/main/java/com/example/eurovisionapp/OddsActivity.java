@@ -1,9 +1,11 @@
 package com.example.eurovisionapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,6 +22,9 @@ public class OddsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_odds);
+
+        ImageButton oddsBack = findViewById(R.id.odds_back);
+        oddsBack.setOnClickListener(v -> startActivity(new Intent(OddsActivity.this, MainActivity.class)));
 
         new Thread(new Runnable() {
             @Override

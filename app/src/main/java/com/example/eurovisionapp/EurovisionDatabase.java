@@ -65,6 +65,19 @@ public class EurovisionDatabase extends SQLiteOpenHelper {
         values2022.put("city", "Turin");
         long newRowId2022 = db.insert("contest_info", null, values2022);
 
+        @SuppressLint("UseCompatLoadingForDrawables") Drawable drawable2021 = resources.getDrawable(R.drawable.euronetherlands);
+        ByteArrayOutputStream byteArrayOutputStream2021 = new ByteArrayOutputStream();
+
+        Bitmap bitmap2021 = ((BitmapDrawable)drawable2021).getBitmap();
+        bitmap2021.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream2021);
+        byte[] imageData2021 = byteArrayOutputStream2021.toByteArray();
+
+        ContentValues values2021 = new ContentValues();
+        values2021.put("image", imageData2021);
+        values2021.put("year", 2021);
+        values2021.put("city", "Rotterdam");
+        long newRowId2021 = db.insert("contest_info", null, values2021);
+
         //------------------------------------------------------------------------------------------
 
         createTableQuery = "CREATE TABLE song_info (id INTEGER PRIMARY KEY, year INTEGER, countryCode TEXT, country TEXT, artist TEXT, song TEXT)";
@@ -85,6 +98,46 @@ public class EurovisionDatabase extends SQLiteOpenHelper {
             songList2023.put("artist", artists2023.get(i));
             songList2023.put("song", songs2023.get(i));
             db.insert("song_info", null, songList2023);
+
+        }
+
+        //-------------------------------------------------------------
+
+        List<String> countries2022 = new ArrayList<>(Arrays.asList("Albania", "Armenia", "Australia", "Austria", "Azerbaijan", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czechia", "Denmark", "Estonia", "Finland", "France", "Georgia", "Germany", "Greece", "Iceland", "Ireland", "Israel", "Italy", "Latvia", "Lithuania", "Malta", "Moldova", "Montenegro", "Netherlands", "North Macedonia", "Norway", "Poland", "Portugal", "Romania", "San Marino", "Serbia", "Slovenia", "Spain", "Sweden", "Switzerland", "Ukraine", "United Kingdom" ));
+        List<String> countryCodes2022 = new ArrayList<>(Arrays.asList("AL", "AM", "AU", "AT", "AZ", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "GE", "DE", "GR", "IS", "IE", "IL", "IT", "LV", "LT", "MT", "MD", "ME", "NL", "MK", "NO", "PL", "PT", "RO", "SM", "RS", "SI", "ES", "SE", "CH", "UA", "GB"));
+        List<String> artists2022 = new ArrayList<>(Arrays.asList("Ronela Hajati", "Rosa Linn", "Sheldon Riley", "LUM!X & Pia Maria", "Nadir Rustamli", "Jérémie Makiese", "Intelligent Music Project", "Mia Dimšić", "Andromache", "We Are Domi", "Reddi", "Stefan", "The Rasmus", "Alvan & Ahez", "Circus Mircus", "Malik Harris", "Amanda Georgiadi Tenfjord", "Systur", "Brooke Scullion", "Michael Ben David", "Mahmood & Blanco", "Citi Zēni", "Monika Liu", "Emma Muscat", "Zdob și Zdub & Advahov Brothers", "Vladana", "S10", "Andrea", "Subwoolfer", "Ochman", "Maro", "WRS", "Achille Lauro", "Konstrakta", "LPS", "Chanel", "Cornelia Jakobs", "Marius Bear", "Kalush Orchestra", "Sam Ryder" ));
+        List<String> songs2022 = new ArrayList<>(Arrays.asList("Sekret", "Snap", "Not The Same", "Halo", "Fade To Black", "Miss You", "Intention", "Guilty Pleasure", "Ela", "Lights Off", "The Show", "Hope", "Jezebel", "Fulenn", "Lock Me In", "Rockstars", "Die Together", "Með hækkandi sól", "That's Rich", "I.M", "Brividi", "Eat Your Salad", "Sentimentai", "I Am What I Am", "Trenulețul", "Breathe", "De Diepte", "Circles", "Give That Wolf a Banana", "River", "Saudade, saudade", "Llámame", "Stripper", "In Corpore Sano", "Disko", "SloMo", "Hold Me Closer", "Boys Do Cry", "Stefania", "Space Man" ));
+
+        ContentValues songList2022= new ContentValues();
+
+        for (int i = 0; i < countries2022.size(); i++) {
+
+            songList2022.put("year", 2022);
+            songList2022.put("countryCode", countryCodes2022.get(i));
+            songList2022.put("country", countries2022.get(i));
+            songList2022.put("artist", artists2022.get(i));
+            songList2022.put("song", songs2022.get(i));
+            db.insert("song_info", null, songList2022);
+
+        }
+
+        //-------------------------------------------------------------
+
+        List<String> countries2021 = new ArrayList<>(Arrays.asList("Albania", "Australia", "Austria", "Azerbaijan", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czechia", "Denmark", "Estonia", "Finland", "France", "Georgia", "Germany", "Greece", "Iceland", "Ireland", "Israel", "Italy", "Latvia", "Lithuania", "Malta", "Moldova", "Netherlands", "North Macedonia", "Norway", "Poland", "Portugal", "Romania", "Russia", "San Marino", "Serbia", "Slovenia", "Spain", "Sweden", "Switzerland", "Ukraine", "United Kingdom" ));
+        List<String> countryCodes2021 = new ArrayList<>(Arrays.asList("AL", "AU", "AT", "AZ", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "GE", "DE", "GR", "IS", "IE", "IL", "IT", "LV", "LT", "MT", "MD", "NL", "MK", "NO", "PL", "PT", "RO", "RU", "SM", "RS", "SI", "ES", "SE", "CH", "UA", "GB"));
+        List<String> artists2021 = new ArrayList<>(Arrays.asList("Anxhela Peristeri", "Montaigne", "Vincent Bueno", "Efendi", "Hooverphonic", "Victoria", "Albina", "Elena Tsagrinou", "Benny Cristo", "Fyr og Flamme", "Uku Suviste", "Blind Channel", "Barbara Pravi", "Tornike Kipiani", "Jendrik", "Stefania", "Daði & Gagnamagnið", "Lesley Roy", "Eden Alene", "Måneskin", "Samanta Tīna", "The Roop", "Destiny", "Natalia Gordienko", "Jeangu Macrooy", "Vasil", "TIX", "Rafał", "The Black Mamba", "Roxen", "Manizha", "Senhit feat. Flo Rida", "Hurricane", "Ana Soklič", "Blas Cantó", "Tusse", "Gjon's Tears", "Go_A", "James Newman" ));
+        List<String> songs2021 = new ArrayList<>(Arrays.asList("Karma", "Technicolour", "Amen", "Mata Hari", "The Wrong Place", "Growing Up Is Getting Old", "Tick-Tock", "El Diablo", "Omaga", "Øve os på hinanden", "The Lucky One", "Dark Side", "Voilà", "You", "I Don't Feel Hate", "Last Dance", "10 Years", "Maps", "Set Me Free", "Zitti e buoni", "The Moon Is Rising", "Discoteque", "Je Me Casse", "Sugar", "Birth Of A New Age", "Here I Stand", "Fallen Angel", "The Ride", "Love Is On My Side", "Amnesia", "Russian Woman", "Adrenalina", "Loco Loco", "Amen", "Voy A Quedarme", "Voices", "Tout l'univers", "Shum", "Embers" ));
+
+        ContentValues songList2021= new ContentValues();
+
+        for (int i = 0; i < countries2021.size(); i++) {
+
+            songList2021.put("year", 2021);
+            songList2021.put("countryCode", countryCodes2021.get(i));
+            songList2021.put("country", countries2021.get(i));
+            songList2021.put("artist", artists2021.get(i));
+            songList2021.put("song", songs2021.get(i));
+            db.insert("song_info", null, songList2021);
 
         }
     }

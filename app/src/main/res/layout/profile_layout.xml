@@ -8,12 +8,11 @@
 
     <ImageButton
         android:id="@+id/auth_back"
-        android:layout_width="109dp"
+        android:layout_width="match_parent"
         android:layout_height="66dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="2dp"
-        android:background="#CCFFFFFF"
+        android:background="#55FFFFFF"
         android:contentDescription="@string/go_back"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/profileImg"
@@ -25,7 +24,7 @@
         android:id="@+id/profileImg"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="80dp"
         android:contentDescription="@string/profile_pic"
         android:gravity="center"
         android:src="@drawable/profile_default"

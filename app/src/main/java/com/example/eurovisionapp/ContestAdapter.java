@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.InputStream;
@@ -40,9 +41,6 @@ public class ContestAdapter extends RecyclerView.Adapter<ContestAdapter.ViewHold
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-//        View view = inflater.inflate(R.layout.contest_layout, parent, false);
-//        return new ViewHolder(view);
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.contest_layout, parent, false);
         return new ViewHolder(itemView);
     }
@@ -63,6 +61,9 @@ public class ContestAdapter extends RecyclerView.Adapter<ContestAdapter.ViewHold
         byte[] blobData = item.getImage();
         Bitmap bitmap = BitmapFactory.decodeByteArray(blobData, 0, blobData.length);
         holder.image.setImageBitmap(bitmap);
+
+        holder.city.setTextColor(ContextCompat.getColor(context, R.color.white_opacity));
+        holder.year.setTextColor(ContextCompat.getColor(context, R.color.white_opacity));
 
         System.out.println(holder.city.getText());
         System.out.println(holder.year.getText());

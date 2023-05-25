@@ -5,7 +5,21 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Bottom2">
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#55FFFFFF">
+    <ImageButton
+        android:id="@+id/bottom2_back"
+        android:layout_width="109dp"
+        android:layout_height="66dp"
+        android:background="#55FFFFFF"
+        android:contentDescription="@string/go_back"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
     <TextView
         android:id = "@+id/bottom2_text"
         android:layout_width="match_parent"
@@ -13,7 +27,7 @@
         android:textSize="30sp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:fontFamily="serif"
         android:textStyle="bold"
         android:text="@string/palaolimpicoo"
@@ -22,12 +36,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         />
+    </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id = "@+id/maps"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="65dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bottom2_text"
         app:layout_constraintLeft_toLeftOf="parent"

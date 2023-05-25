@@ -6,11 +6,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Tab3">
 
+    <ImageButton
+        android:id="@+id/tab3_back"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="#55FFFFFF"
+        android:contentDescription="@string/go_back"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
     <WebView
         android:id="@+id/tab3_page"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="66dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"

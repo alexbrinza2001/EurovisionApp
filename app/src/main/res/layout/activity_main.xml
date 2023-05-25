@@ -68,7 +68,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/main_title"
             app:layout_constraintVertical_bias="0.145"
-            app:rippleColor="#000000" />
+            app:rippleColor="@color/pastel_purple" />
 
         <Button
             android:id="@+id/results"
@@ -78,7 +78,7 @@
             android:background="@color/button_color2"
             android:focusable="false"
             android:fontFamily="sans-serif-black"
-            android:text="@string/results"
+            android:text="@string/official_results"
             android:textColor="#FFFFFF"
             android:textIsSelectable="true"
             android:textSize="20sp"
@@ -90,7 +90,8 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/my_tops"
-            app:layout_constraintVertical_bias="0.095" />
+            app:layout_constraintVertical_bias="0.095"
+            app:rippleColor="@color/pastel_purple"/>
 
         <Button
             android:id="@+id/locations"
@@ -108,7 +109,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/results" />
+            app:layout_constraintTop_toBottomOf="@+id/results"
+            app:rippleColor="@color/pastel_purple"/>
 
         <Button
             android:id="@+id/top"
@@ -118,7 +120,7 @@
             android:background="@color/button_color2"
             android:focusable="false"
             android:fontFamily="sans-serif-black"
-            android:text="@string/top"
+            android:text="@string/users_top"
             android:textColor="#FFFFFF"
             android:textIsSelectable="true"
             android:textSize="20sp"
@@ -126,7 +128,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/news" />
+            app:layout_constraintTop_toBottomOf="@+id/news"
+            app:rippleColor="@color/pastel_purple"/>
 
         <Button
             android:id="@+id/odds"
@@ -144,7 +147,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/top" />
+            app:layout_constraintTop_toBottomOf="@+id/top"
+            app:rippleColor="@color/pastel_purple"/>
     </LinearLayout>
 
     <ImageButton

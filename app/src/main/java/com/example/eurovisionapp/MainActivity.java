@@ -1,52 +1,20 @@
 package com.example.eurovisionapp;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
-import androidx.work.Constraints;
-import androidx.work.Data;
-import androidx.work.NetworkType;
-import androidx.work.OneTimeWorkRequest;
-import androidx.work.WorkManager;
-import androidx.work.WorkRequest;
 
 import android.Manifest;
-import android.app.AlarmManager;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.app.job.JobInfo;
-import android.app.job.JobScheduler;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
-
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.material.timepicker.MaterialTimePicker;
-import com.google.android.material.timepicker.TimeFormat;
-
-import java.util.Calendar;
-import java.util.concurrent.TimeUnit;
-
-import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     public static Boolean isLoggedIn = false;
     private static Context context;
     private static Object service;
+
+    public static int whichYear = 2023;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
                 if (!isLoggedIn) {
                     Toast.makeText(MainActivity.this, "Please login first!", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent intent = new Intent(MainActivity.this, Top2023.class);
+                    MyTops.whereAmI = 0;
+                    Intent intent = new Intent(MainActivity.this, MyTops.class);
                     startActivity(intent);
                 }
             }
@@ -117,7 +88,13 @@ public class MainActivity extends AppCompatActivity {
         locations.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, LocationsActivity.class)));
 
         Button topButton = findViewById(R.id.top);
-        topButton.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, OverallActivity.class)));
+        topButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MyTops.whereAmI = 1;
+                startActivity(new Intent(MainActivity.this, MyTops.class));
+            }
+        });
 
         Intent serviceIntent = new Intent(this, BackgroundMusicService.class);
         startService(serviceIntent);

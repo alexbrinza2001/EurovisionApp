@@ -5,14 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<LinearLayout
+    android:id="@+id/title_lt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginTop="30dp"
+    android:background="#55FFFFFF">
+
     <ImageButton
         android:id="@+id/auth_back"
         android:layout_width="109dp"
         android:layout_height="66dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="2dp"
-        android:background="#CCFFFFFF"
+        android:background="#44FFFFFF"
         android:contentDescription="@string/go_back"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/overall_title"
@@ -22,15 +29,16 @@
 
     <TextView
         android:id="@+id/overall_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:fontFamily="serif"
         android:text="@string/overall_top"
         android:textAlignment="center"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="48sp"
+        android:gravity="center"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +47,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.122" />
-
+</LinearLayout>
     <ScrollView
         android:id="@+id/scroll_overall"
         android:layout_width="350dp"
@@ -50,7 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/overall_title"
+        app:layout_constraintTop_toBottomOf="@+id/title_lt"
         app:layout_constraintVertical_bias="0.312">
 
         <LinearLayout
@@ -72,7 +80,7 @@
                 android:background="#CCC9B037"
                 android:fontFamily="serif"
                 android:gravity="center"
-                android:text="@string/hielau"
+                android:text="@string/ceva"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
