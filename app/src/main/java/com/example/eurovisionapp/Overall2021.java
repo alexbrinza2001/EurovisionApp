@@ -48,7 +48,7 @@ public class Overall2021 extends AppCompatActivity {
         System.out.println("inainte de for 1");
 
         for (int i = 1; i <= userCounter; i++) {
-            if (preferences.contains("1_2021_" + i)) {
+            if (preferences.contains("1_2021_" + i) && !preferences.getString("1_2021_" + i, "").equals("12p")) {
                 System.out.println("am intrat in if");
                 String c1 = preferences.getString("1_2021_" + i, "");
                 val = dictionary.get(c1);

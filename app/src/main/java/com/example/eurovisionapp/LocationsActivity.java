@@ -13,8 +13,6 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-import java.util.Objects;
-
 public class LocationsActivity extends AppCompatActivity {
 
     ViewPager2 viewPager2;

@@ -57,9 +57,6 @@
             android:name=".MyAppPrefs">
         </activity>
         <activity
-            android:name=".VideoActivity">
-        </activity>
-        <activity
             android:name=".ProfileSettingsActivity">
         </activity>
         <activity

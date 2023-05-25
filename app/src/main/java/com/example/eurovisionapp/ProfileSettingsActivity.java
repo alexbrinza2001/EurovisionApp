@@ -16,10 +16,6 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.ResourceBundle;
-
 public class ProfileSettingsActivity extends AppCompatActivity {
 
     private final int GALLERY_REQ_CODE = 1000;

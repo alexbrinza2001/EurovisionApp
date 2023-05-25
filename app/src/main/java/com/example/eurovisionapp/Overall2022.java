@@ -45,7 +45,7 @@ public class Overall2022 extends AppCompatActivity {
         int userCounter = preferences.getInt("id", 0);
         int val = 0;
         for (int i = 1; i <= userCounter; i++) {
-            if (preferences.contains("1_2022_" + i)) {
+            if (preferences.contains("1_2022_" + i) && !preferences.getString("1_2022_" + i, "").equals("12p"))  {
                 String c1 = preferences.getString("1_2022_" + i, "");
                 val = dictionary.get(c1);
                 dictionary.put(c1, val + 12);

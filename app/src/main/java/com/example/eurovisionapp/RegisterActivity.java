@@ -12,8 +12,6 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-//import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -36,8 +34,6 @@ public class RegisterActivity extends AppCompatActivity {
         gender = findViewById(R.id.gender);
 
         preferences = getSharedPreferences("USER_INFO", 0);
-
-        //culori pentru butoane
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,13 +88,27 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }
 
+                int usersCount = preferences.getInt("id", 0);
+
+                for (int i = 1; i <= usersCount; i++) {
+
+                    String email = preferences.getString("email" + i, "");
+
+                    if (email.equals(emailValue)) {
+                        ok = 0;
+                        Toast.makeText(RegisterActivity.this, "The email address is already registered!", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+
                 if (ok == 1) {
-                    int usersCount = preferences.getInt("id", 0) + 1;
-                    //usersCount += 1;
+
+                    usersCount += 1;
+                    String token = PasswordGenerator.generateToken(passValue);
+
                     SharedPreferences.Editor editor = preferences.edit();
-                    //editor.putString("id", Integer.toString(usersCount));
                     editor.putString("email" + usersCount, emailValue);
-                    editor.putString("password" + usersCount, passValue);
+                    editor.putString("password" + usersCount, token);
                     editor.putString("first_name" + usersCount, firstValue);
                     editor.putString("second_name" + usersCount, secondValue);
                     editor.putString("gender" + usersCount, genderValue);

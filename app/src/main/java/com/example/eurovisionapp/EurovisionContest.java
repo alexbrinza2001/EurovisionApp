@@ -1,7 +1,5 @@
 package com.example.eurovisionapp;
 
-import java.sql.Blob;
-
 public class EurovisionContest {
 
     private byte[] image;

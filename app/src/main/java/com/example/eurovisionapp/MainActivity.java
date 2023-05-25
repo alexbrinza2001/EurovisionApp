@@ -8,7 +8,6 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -71,9 +70,6 @@ public class MainActivity extends AppCompatActivity {
 
         Button resultsButton = findViewById(R.id.results);
         resultsButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ResultsActivity.class)));
-
-        EurovisionDatabase edb = new EurovisionDatabase(context);
-        SQLiteDatabase database = edb.getWritableDatabase();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
 

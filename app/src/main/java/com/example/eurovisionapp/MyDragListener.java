@@ -1,7 +1,6 @@
 package com.example.eurovisionapp;
 
 import android.content.ClipData;
-import android.content.Context;
 import android.view.DragEvent;
 import android.view.View;
 import android.widget.TextView;

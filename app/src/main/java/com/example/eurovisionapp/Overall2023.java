@@ -47,7 +47,7 @@ public class Overall2023 extends AppCompatActivity {
 
 
         for (int i = 1; i <= userCounter; i++) {
-            if (preferences.contains("1_" + i)) {
+            if (preferences.contains("1_" + i) && !preferences.getString("1_" + i, "").equals("12p")) {
                 String c1 = preferences.getString("1_" + i, "");
                 val = dictionary.get(c1);
                 dictionary.put(c1, val + 12);
